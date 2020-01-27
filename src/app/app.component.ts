@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+// import {PtService} from '../pt.service';
+// import {Pst} from './pt.model';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angularproject';
+  storedPosts = [];      // ek array banaya jis mai hun post k elements dalengee
+
+  onPostAdded(post) {
+  this.storedPosts.push(post);
+  }
 }
